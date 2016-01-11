@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Doze</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="HTML5/jqry/modernizr.custom.js"></script>
+<script src="HTML5/jqry/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="HTML5/jqry/common.js"></script>
+<script src="HTML5/lib/utils.js" type="text/javascript"></script>
+<script src="HTML5/lib/cmscore.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="../HTML5/jqry/jquery.dlmenu.js"></script> 
+</head>
+<body id="body">
+<div id="msgMain">
+	<div class="header" style="clear:both;">
+		<div id="dl-menu" class="dl-menuwrapper">
+		  <button class="dl-trigger">Open Menu</button>
+		<ul class="dl-menu">
+			<li id="id-home"><a>Home</a></li>
+			<li id="id1"><a>Sehri Iftar Time</a></li>
+			<li id="id2"><a>Al-Quran</a></li>
+			<li id="id3"><a>Hadith</a></li>
+			<li id="id4"><a>Zakat Fitra</a></li>
+			<li id="id5"><a>MMS</a></li>
+			<li id="id6"><a>Wallpaper</a></li>
+			<li id="id7"><a>Logout</a></li>
+		  </ul>
+		</div>
+	</div>
+    <div id="goBack">go Back</div>
+    <div id="cmsData" cms_root="root" cms_back_id="goBack">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function onCMSDataReceived() {
+        loadCMSCategory("root", "#cmsData")
+    }
+
+
+    $(document).ready(function() {
+        CMS_CATEGORY_URL = "http://" + document.domain + "/CMSWebService/getCMSCategoryList.php";
+        CMS_CONTENT_URL = "http://" + document.domain + "/CMSWebService/getCMSContentList.php";
+
+        initCMS("onCMSDataReceived");
+
+        $("#goBack").click(function () {
+            goBackInTarget("#cmsData");
+        });
+
+        $('#dl-menu').dlmenu();
+
+        $('#id1').click(function() {
+            loadCMSCategory("cat2", "#cmsData")
+            $('#dl-menu').closeMenu();
+        });
+        $('#id2').click(function() {
+            loadCMSCategory("cat3", "#cmsData")
+        });
+        $('#id3').click(function() {
+            loadCMSCategory("cat4", "#cmsData")
+        });
+        $('#id4').click(function() {
+            loadCMSCategory("cat5", "#cmsData")
+        });
+        $('#id5').click(function() {
+            loadCMSCategory("cat6", "#cmsData")
+        });
+        $('#id6').click(function() {
+            loadCMSCategory("cat7", "#cmsData")
+        });
+        $('#id7').click(function() {
+            parent.logout();
+        });
+        $('#id-home').click(function() {
+            location.reload();
+        });
+    });
+	
+	
+</script>
+</body>
+</html>

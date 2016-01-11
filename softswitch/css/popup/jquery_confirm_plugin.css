@@ -1,0 +1,180 @@
+#confirmOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../../img/popup/ie.png');
+    background: -moz-linear-gradient(rgba(11, 11, 11, 0.1), rgba(11, 11, 11, 0.6)) repeat-x rgba(11, 11, 11, 0.2);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(11, 11, 11, 0.1)), to(rgba(11, 11, 11, 0.6))) repeat-x rgba(11, 11, 11, 0.2);
+    z-index: 100000;
+}
+
+#confirmBox {
+    background: url('../../img/popup/body_bg.jpg') repeat-x left bottom #e5e5e5;
+   
+
+    position: absolute; 
+    left: 20%;
+    right: 20%;
+    border: 1px solid rgba(33, 33, 33, 0.6);
+
+    -moz-box-shadow: 0 0 2px rgba(255, 255, 255, 0.6) inset;
+    -webkit-box-shadow: 0 0 2px rgba(255, 255, 255, 0.6) inset;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.6) inset;
+}
+
+#confirmBox h1,
+#confirmBox p {
+    font: 26px/1 'Cuprum', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    background: url('../../img/popup/header_bg.jpg') repeat-x left bottom #f5f5f5;
+    padding: 18px 25px;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+    color: #666;
+}
+
+#confirmBox h1 {
+    letter-spacing: 0.3px;
+    color: #888;
+}
+
+#confirmBox p {
+    background: none;
+    font-size: 16px;
+    line-height: 1.4;
+    padding-top: 35px;
+}
+
+#confirmButtons {
+    padding: 15px 0 25px;
+    text-align: center;
+}
+
+#confirmBox .button {
+    display: inline-block;
+
+    color: white;
+    position: relative;
+    height: 33px;
+
+    font: 17px/33px 'Cuprum', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+
+    margin-right: 15px;
+    padding: 0 35px 0 40px;
+    text-decoration: none;
+    border: none;
+}
+
+#confirmBox .button:last-child {
+    margin-right: 0;
+}
+
+#confirmBox .button span {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 33px
+}
+
+/**background:url('buttons.png') no-repeat;*/
+#confirmBox .red {
+    background-color: #FF0000;
+    text-shadow: 1px 1px 0 #5889a2;
+}
+
+#confirmBox h1.red {
+    color: #FF0000;
+}
+
+#confirmBox .red span {
+    background-color: #FF0000;
+}
+
+#confirmBox .red:hover {
+    background-color: #FF9999;
+}
+
+#confirmBox .red:hover span {
+    background-color: #FF9999;
+}
+
+#confirmBox .blue {
+    background-color: #3333FF;
+    text-shadow: 1px 1px 0 #5889a2;
+}
+
+#confirmBox .blue span {
+    background-color: #3333FF;
+}
+
+#confirmBox .blue:hover {
+    background-color: #8080FF;
+}
+
+#confirmBox .blue:hover span {
+    background-color: #8080FF;
+}
+
+#confirmBox .green {
+    background-color: #009900;
+    text-shadow: 1px 1px 0 #5889a2;
+}
+
+#confirmBox h1.green {
+    color: #009900;
+}
+
+#confirmBox .green span {
+    background-color: #009900;
+}
+
+#confirmBox .green:hover {
+    background-color: #5CBD5C;
+}
+
+#confirmBox .green:hover span {
+    background-color: #5CBD5C;
+}
+
+#confirmBox .gray {
+    background-color: #3F3F3F;
+    text-shadow: 1px 1px 0 #707070;
+}
+
+#confirmBox h1.gray {
+    color: #3F3F3F;
+}
+
+#confirmBox .gray span {
+    background-color: #3F3F3F;
+}
+
+#confirmBox .gray:hover {
+    background-color: #797979;
+}
+
+#confirmBox .gray:hover span {
+    background-color: #797979;
+}
+
+#confirmBox .yellow {
+    background-color: #ec971f;
+    text-shadow: 1px 1px 0 #f0ad4e;
+}
+
+#confirmBox h1.yellow {
+    color: #ffb11b;
+}
+
+#confirmBox .yellow span {
+    background-color: #ffb11b;
+}
+
+#confirmBox .yellow:hover {
+    background-color: #FFF0A5;
+}
+
+#confirmBox .yellow:hover span {
+    background-color: #FFF0A5;
+}

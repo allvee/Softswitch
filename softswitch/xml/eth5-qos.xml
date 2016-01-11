@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root rate='1024000' ceil='1024000' quantum='6000'>
+<class>
+	<name>Linux</name>
+	<id>1</id>
+	<upload>2048</upload>
+	<download>204</download>
+	<burst>1</burst>
+	<priority>0</priority>
+	<que>SFQ</que>
+	<mode>Routing</mode>
+	<client>
+		<name>Test</name>
+		<id>1</id>
+		<bandwidth>5000</bandwidth>
+		<burst>1</burst>
+		<max_bandwidth>1000</max_bandwidth>
+		<rules>
+			<rule>
+				<src>172.83.1.3</src>
+				<mac>AV:DW:CA:1K:00:0F</mac>
+				<dst>192.168.241.22</dst>
+				<port>80</port>
+				<percentage>20%</percentage>
+			</rule>
+			<rule>
+				<src>0.0.0.0</src>
+				<mac>AV:DW:CA:1K:00:0F</mac>
+				<dst>192.168.241.22</dst>
+				<percentage>80%</percentage>
+			</rule>
+		</rules>
+	</client>
+</class>
+<class>
+	<name>default</name>
+	<limit>8</limit>
+</class>
+</root>

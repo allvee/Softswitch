@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<title>  Softswitch   </title>
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--============================= Framework defined css =============================-->
+<link href="softswitch/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+<!--============================= user defined css =============================-->
+<link href="softswitch/font-awesome-4.1.0/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css" />
+<link href="softswitch/css/datePicker/datepicker3.css" rel="stylesheet"
+	type="text/css" />
+
+<!--============================= plug-in css  ============================================================-->
+<link href="softswitch/css/popup/jquery_confirm_plugin.css"
+	rel="stylesheet" type="text/css" />
+<link href="softswitch/css/datatable/jquery.dataTables_themeroller.css"
+	rel="stylesheet" type="text/css" />
+<link href="softswitch/css/datatable/jquery.dataTables.css"
+	rel="stylesheet" type="text/css" />
+<link href="softswitch/css/datatable/dataTables.tableTools.css"
+	rel="stylesheet" type="text/css" />
+<link href="softswitch/css/datatable/dataTables.responsive.css"
+	rel="stylesheet" type="text/css" />
+<link href="softswitch/css/droupdown/chosen.css" rel="stylesheet"
+	type="text/css" />
+
+<link href="softswitch/css/datePicker/bootstrap-datetimepicker.min.css" rel="stylesheet"
+              type="text/css" />
+<link href="softswitch/css/jquery.datetimepicker.css" rel="stylesheet"
+	type="text/css" />
+<link href="softswitch/css/notify/notify.css" rel="stylesheet" type="text/css">
+
+<!--============================= Site related custom js =============================-->
+<!--<link href="softswitch/css/smsDoze-custom.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="softswitch/css/style.css" rel="stylesheet" type="text/css"/>-->
+
+<link href="softswitch/css/rcportal_custom.css" rel="stylesheet"
+	type="text/css" />
+  <!--  <link href="design/reset.css" rel="stylesheet"
+          type="text/css" />
+    <link href="design/style.css" rel="stylesheet"
+          type="text/css" />-->
+
+</head>
+<body id="body">
+
+	<noscript>
+		Please use HTML5 supported browser.<br> For full functionality of
+		this page it is necessary to enable JavaScript.<br> Here are the
+		<a href="http://www.enable-javascript.com/" target="_blank">
+			instructions how to enable JavaScript in your web browser</a>
+	</noscript>
+
+
+	<div class="container-fluid">
+		<div class="header"></div>
+
+
+		<div id="id_loading_image" class="centered" style="display: block">
+			<img src="softswitch/img/31.gif">
+		</div>
+		<div id="message_display">
+			<!-- ============================ start Show message alert ========================== -->
+
+			<!-- =============================End Show message alert====================== -->
+		</div>
+		<div class="container-fluid" id="contentService">
+			<div class="row">
+				<div id="cmsData">
+					<!-- =======================================================================================-->
+
+					<!-- =======================================================================================-->
+				</div>
+			</div>
+		</div>
+
+        <div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1"
+             role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header modal-bg">
+                        <div class="col-md-12" id="title_custom" style="text-align:center">
+                            <span id="set_title"></span>
+                            <a href="#" aria-hidden="true" data-dismiss="modal" class="pull-right"> <img alt="Close" src="softswitch/img/modal_icon-close.png"></a>
+                        </div>
+                        <div class="col-md-12" id="tab_view"></div>
+                    </div>
+
+                    <div id="modalData" class="modal-bg"></div>
+                </div>
+            </div>
+        </div>
+
+    <div id="etho_modal" class="modal fade bs-example-modal-lg" tabindex="-1"
+         role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                </div>
+                <div id="modalData">
+                 <div class="panel col-md-12" id="tab_view">
+                 </div>
+                    <div class="container-fluid" >
+                    <div class="row">
+                        <div class="col-md-2">
+                    <nav class="navbar   navbar-static-top marginBottom-0" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target="#navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                        </div>
+
+                        <div class=" navbar-collapse" id="navbar-collapse-1">
+                            <ul class="dropdown-menu" role="menu"
+                                style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                                <li><a href="#" class="btn btn-primary btn-lg btn-block round">IP Assignment</a></li>
+                                <li><a href="#" class="btn btn-primary btn-lg btn-block round">Add sub Interface</a>
+                                </li>
+
+                                <li class="dropdown dropdown-submenu">
+                                    <a href="#" data-toggle="dropdown"
+                                       class="dropdown-toggle btn btn-primary btn-lg btn-block round">DHCP</a>
+                                    <ul class="dropdown-menu" style="left: 100%;">
+                                        <li><a href="#" class="btn btn-primary btn-lg btn-block round">config</a></li>
+                                        <li><a href="#" class="btn btn-primary btn-lg btn-block round">view</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown dropdown-submenu"><a href="#" data-toggle="dropdown"
+                                                                         class="btn btn-primary btn-lg btn-block round">NAT</a>
+                                    <ul class="dropdown-menu" style="left: 100%;">
+                                        <li><a href="#" class="btn btn-primary btn-lg btn-block round">config</a></li>
+                                        <li><a href="#" class="btn btn-primary btn-lg btn-block round">view</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown dropdown-submenu"><a href="#" data-toggle="dropdown"
+                                                                         class="btn btn-primary btn-lg btn-block round">BWC</a>
+                                    <ul class="dropdown-menu" style="left: 100%;">
+                                        <li class="dropdown dropdown-submenu"><a href="#"
+                                                                                 class="btn btn-primary btn-lg btn-block round"
+                                                                                 data-toggle="dropdown">Group</a>
+                                            <ul class="dropdown-menu" style="left: 100%;">
+                                                <li><a href="#"
+                                                       class="btn btn-primary btn-lg btn-block round">config</a></li>
+                                                <li><a href="#" class="btn btn-primary btn-lg btn-block round">view</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown dropdown-submenu"><a href="#"
+                                                                                 class="btn btn-primary btn-lg btn-block round"
+                                                                                 data-toggle="dropdown">Time Profile</a>
+                                            <ul class="dropdown-menu" style="left: 100%;">
+                                                <li><a href="#"
+                                                       class="btn btn-primary btn-lg btn-block round">config</a></li>
+                                                <li><a href="#" class="btn btn-primary btn-lg btn-block round">view</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown dropdown-submenu"><a href="#"
+                                                                                 class="btn btn-primary btn-lg btn-block round"
+                                                                                 data-toggle="dropdown">rule</a>
+                                            <ul class="dropdown-menu" style="left: 100%;">
+                                                <li><a href="#"
+                                                       class="btn btn-primary btn-lg btn-block round">config</a></li>
+                                                <li><a href="#" class="btn btn-primary btn-lg btn-block round">view</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="btn btn-primary btn-lg btn-block round">Summary</a></li>
+                                <li><a href="#" class="btn btn-primary btn-lg btn-block round">Notification</a></li>
+                            </ul>
+
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </nav>
+                    </div> <div class="col-md-10" id="et_content_data">
+                        <div class="row report"></div>
+                        <div class="row report"></div>
+                        <div class="row report"></div>
+                       <div class="row report"></div>
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer" class="footer-padding"></footer>
+
+</div>
+		<!-- Footer -->
+		<footer id="footer" class="footer-padding"></footer>
+
+	</div>
+
+	<!--============================= Framework js =============================-->
+	<script src="WebFramework/HTML5/jqry/jquery-1.10.2.min.js"
+		type="text/javascript"></script>
+	<script src="WebFramework/HTML5/jqry/modernizr.custom.js"
+		type="text/javascript"></script>
+	<script src="WebFramework/HTML5/lib/utils.js" type="text/javascript"></script>
+	<script src="WebFramework/HTML5/lib/cmscore.js" type="text/javascript"></script>
+	<script src="WebFramework/HTML5/lib/validationEngine.js"
+		type="text/javascript"></script>
+	<script src="WebFramework/HTML5/lib/tableEngine.js"
+		type="text/javascript"></script>
+
+	<!--============================= Site related plugin builtin js =============================-->
+	<script src="softswitch/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="softswitch/js/datePicker/bootstrap-datepicker.js"
+		type="text/javascript"></script>
+      
+       
+	<script src="softswitch/js/popup/jquery_confirm_plugin.js"
+		type="text/javascript"></script>
+	<script src="softswitch/js/datatable/jquery.dataTables.min.js"
+		type="text/javascript"></script>
+	<script src="softswitch/js/datatable/dataTables.tableTools.js"
+		type="text/javascript"></script>
+	<!--script src="softswitch/js/datatable/dataTables.responsive.min.js" type="text/javascript"></script-->
+	<script src="softswitch/js/droupdown/chosen.jquery.js"
+		type="text/javascript"></script>
+	
+	<script src="softswitch/js/jquery.canvasjs.min.js" type="text/javascript"></script>
+
+        <script src="softswitch/js/datePicker/bootstrap-datetimepicker.min.js"
+        type="text/javascript"></script>
+	<script src="softswitch/js/datePicker/jquery.datetimepicker.js"
+        type="text/javascript"></script>
+       
+	<script src="softswitch/js/highchart/highcharts.js"
+        type="text/javascript"></script>
+	<script src="softswitch/js/highchart/highcharts-3d.js"
+        type="text/javascript"></script>
+        <script src="softswitch/js/highchart/exporting.js"
+        type="text/javascript"></script>
+
+       <script src="softswitch/js/notify/notify.js"></script>
+	<script src="softswitch/js/datatable/jquery.dataTables.rowGrouping.js"></script>
+
+
+	<!--============================= Site related js =============================-->
+	<script src="softswitch/js/config.js" type="text/javascript"></script>
+	<script src="softswitch/js/common.js" type="text/javascript"></script>
+	<script src="softswitch/js/commonDropDown.js" type="text/javascript"></script>
+	<script src="softswitch/js/popup/plugin_edited_finction.js" type="text/javascript"></script>
+	<script src="softswitch/js/errorHandling.js" type="text/javascript"></script>
+
+
+	<!--============================= Site related custom js =============================-->
+	<script src="softswitch/js/home.js" type="text/javascript"></script>
+	<script src="softswitch/js/UserLogin.js" type="text/javascript"></script>
+    <script src="softswitch/js/ssdt-1.1.js" type="text/javascript"></script>
+
+	<!--============================= Site related custom js by Talemul=============================-->
+
+<script src="softswitch/js/softswitch_userinfo.js" type="text/javascript"></script>
+<script src="softswitch/js/um/dump_on_screen.js" type="text/javascript"></script>
+
+
+        <!--============================= Site related custom js by Monir=============================-->
+
+
+       <script src="softswitch/js/version_control/version_control.js" type="text/javascript"></script>
+       <script src="softswitch/js/version_control/backup.js" type="text/javascript"></script>
+
+	<!--============================= Site related custom js by Danial=============================-->
+
+ 	<script src="softswitch/js/um/utility_manager.js" type="text/javascript"></script>
+    <script src="softswitch/js/highchart/utils.js" type="text/javascript"></script>
+
+ 
+    
+	<!-- FOR Softswitch START -->
+    <script src="softswitch/js/softswitch/dial_plan_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/dial_plan_contex_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/route_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/server_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/call_cdr_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/im_cdr_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/clint_setting_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/extensions_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/context_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/configuration_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/log_management_info.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/softswitch_gw.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/soft_maintenance.js" type="text/javascript"></script>
+    <script src="softswitch/js/softswitch/softswitch_dialplan.js" type="text/javascript"></script>
+
+    
+  
+
+  
+
+</body>
+</html>
+
+
+

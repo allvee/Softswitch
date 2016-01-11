@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.11.3.min.js"></script>
+
+</head>
+
+<body>
+
+
+<div class="wapper">
+
+<div class="modal-box">
+<div class="closebtnarea"><a href="#"><img src="images/icon-close.png" alt="Close"></a></div>
+<div class="modal-content clearfix">
+<div class="modal-text"><div id="tabs-container">
+    <ul class="tabs-menu">
+        <li class="current"><a href="#tab-1">Configuration</a></li>
+        <li><a href="#tab-2">View</a></li>
+           </ul>
+    <div class="tab">
+        <div id="tab-1" class="tab-content">
+        <div class="tabtitle"><img src="images/icon-setting.png">GRE Setting</div>
+        <div class="tabinner clearfix">
+          <form action="" method="get">
+          <div class="halfcol">
+          <label for="name">name</label><input type="text" name="name" id="name"><br>
+          <label for="name">            name</label><input type="text" name="name" id="name">
+          </div>
+          <div class="halfcol">
+          <label for="name">name</label><input type="text" name="name" id="name"><br>
+          <label for="name">name</label><input type="text" name="name" id="name">
+          </div>
+       <div class="subtn"> <input type="submit" name="button" id="button" value="Submit"></div>
+    </form>
+    </div>
+        </div>
+        <div id="tab-2" class="tab-content">
+        <div class="tabtitle"><img src="images/icon-setting.png">Setting</div>
+        <div class="tabinner clearfix">
+          <form action="" method="get">
+          <div class="halfcol">
+          <label for="name">name</label><input type="text" name="name" id="name"><br>
+          <label for="name">name</label><select name="">
+            <option value="das">Select</option>
+            <option value="dasd">dasd</option>
+            <option value="gfdg">gfgdfg</option>
+          </select><br>
+          <label for="name">name</label><input type="text" name="name" id="name"><br>
+          <label for="name">name</label><input type="text" name="name" id="name"><br>
+          <label for="name">name</label><select name="">
+            <option value="das">Select</option>
+            <option value="dasd">dasd</option>
+            <option value="gfdg">gfgdfg</option>
+          </select><br>
+          <label for="name">name</label><input type="text" name="name" id="name">
+          </div>
+          <div class="halfcol">
+          <label for="name">name</label><input type="text" name="name" id="name"><br>
+          <label for="name">name</label><input type="text" name="name" id="name">
+          </div>
+        <div class="subtn"><input type="submit" name="button" id="button" value="Submit"></div>
+    </form>
+    </div>
+        </div>
+    
+    </div>
+</div></div>
+
+</div>
+</div>
+
+
+</div>
+<script>
+$(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});
+
+</script>
+</body>
+</html>

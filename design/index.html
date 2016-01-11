@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+<div class="section toparea">
+  <div class="wapper"><img src="images/logo.png"></div>
+</div>
+<div class="section contentarea">
+  <div class="wapper">
+    <div class="content">  <form action="" method="get">
+      <label for="name">name</label>
+        <input type="text" name="name" id="name">
+        <label for="address">address</label>
+        <input type="text" name="address" id="address">
+        <label for="email">email</label>
+        <input type="text" name="email" id="email">
+        <label for="select"></label>
+        <select name="select" id="select">
+          <option>select one</option>
+          <option>one item</option>
+        </select>
+        <input type="submit" name="button" id="button" value="Submit">
+    </form>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+    <div class="menus">
+      <ul>
+        <li><a href="#">IP Assignment</a></li>
+        <li><a href="#">RT</a><ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        </ul></li>
+        <li><a href="#">Firewall</a></li>
+        <li><a href="#">VPN</a><ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        </ul></li>
+        <li><a href="#">NAT</a></li>
+      </ul>
+    </div>
+    
+  
+    
+  </div>
+</div>
+<div class="section bottommenu">
+  <div class="wapper">
+    <ul>
+      <li><a href="#">eth0</a>
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        </ul>
+      </li>
+      <li><a href="#">eth1</a></li>
+      <li><a href="#">eth2</a></li>
+      <li><a href="#">eth3</a></li>
+      <li><a href="#">eth4</a></li>
+      <li><a href="#">eth5</a></li>
+    </ul>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+    $('.menus ul li').click(function() {
+		    $('.menus ul li').parent().addClass('visible');
+       // $('').toggleClass('visible');
+    });
+});
+
+</script>
+</body>
+</html>

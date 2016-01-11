@@ -1,0 +1,46 @@
+<?php
+//session_start();
+header('Access-Control-Allow-Origin: *');
+require_once "../lib/common.php";
+//require_once "../Lib/filewriter.php";
+
+
+
+//print_r($info);
+//print_r($_SESSION);
+//exit;
+//
+$cn = connectDB();
+$qry = "select * from `bwc_clientinfo` where `is_active`='active'";
+$rs = Sql_exec($cn,$qry);
+$data = array();
+$i=0;
+while($row = Sql_fetch_array($rs)){
+
+    $j=0;
+    $data[$i][$j++] = Sql_Result($row, "clientName");
+    $data[$i][$j++] = Sql_Result($row, "groupName");
+    $data[$i][$j++] = Sql_Result($row, "packageId");
+    $data[$i][$j++] = Sql_Result($row, "upLoad");
+    $data[$i][$j++] = Sql_Result($row, "downLoad");
+    $data[$i][$j++] = Sql_Result($row, "brust");
+    $data[$i][$j++] = Sql_Result($row, "max_upLoad");
+    $data[$i][$j++] = Sql_Result($row, "max_downLoad");
+    $data[$i][$j++] = Sql_Result($row, "priority");
+   // $data[$i][$j++] = Sql_Result($row, "mac");
+
+    $data[$i][$j++] = '<span onclick="view_client_bwc_rules(this,'."'".Sql_Result($row, "clientId")."'".'); return false;">&nbsp;<img style="position: relative; cursor: pointer; top: 4px" width="16" height="16" border="0" src="rcportal/img/view.png" ></span>';
+    $data[$i][$j++] = '<span onclick="edit_input_form_bwc_client(this,'."'".Sql_Result($row, "clientId")."'".'); return false;">&nbsp;<img style="position: relative; cursor: pointer; top: 4px" width="16" height="16" border="0" src="rcportal/img/pen.png" ></span>'.'&nbsp&nbsp'.'<span onclick="delete_bwc_client(this,'."'".Sql_Result($row, "clientId")."'".'); return false;">&nbsp;<img style="position: relative; cursor: pointer; top: 4px" width="16" height="16" border="0" src="rcportal/img/cancel.png" ></span>';
+    /*  $data[$i][$j++] = '<button style="background-color: blue; margin: 2px;" onclick="edit_input_form_bwc_group(this,' . "'" . Sql_Result($row, "id") . "'" . '); return false;" class="btn btn-primary" type="button"> <i class="fa fa-pencil-square-o"></i> Edit
+  </button>' . '<button style="background-color: #FF0000;margin: 2px;   " onclick="delete_bwc_group(this,' . "'" . Sql_Result($row, "id") . "'" . '); return false;" class="btn btn-primary" type="button"> <i class="fa fa-times"></i> Delete
+  </button>';*/
+    $i++;
+}
+
+
+
+echo json_encode($data);
+ClosedDBConnection($cn);
+
+
+?>
